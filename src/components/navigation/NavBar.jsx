@@ -3,7 +3,7 @@ import { Links } from './Links'
 import { links } from '../../data/Menu'
 import { Login } from './Login';
 
-export const NavBar = () => {
+export const NavBar = ({onClick}) => {
   const ulStyle = "navbar-nav me-auto mb-2 mb-lg-0";
   const liStyle = "nav-item";
   const aStyle = "nav-link active text-white";
@@ -26,7 +26,7 @@ export const NavBar = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <Links options={{ links, ulStyle, liStyle, aStyle }} />
-            <Login/>
+            <Login onClick={onClick} />
             
           </div>
         </div>

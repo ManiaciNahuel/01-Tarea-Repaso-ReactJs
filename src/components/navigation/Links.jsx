@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Links = ({ options }) => {
-  console.log(options);
+ 
   return (
     <>
       <ul className={options.ulStyle}>
