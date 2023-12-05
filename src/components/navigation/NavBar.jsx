@@ -1,6 +1,13 @@
 import React from 'react'
+import { Links } from './Links'
+import { links } from '../../data/Menu'
+import { Login } from './Login';
 
 export const NavBar = () => {
+  const ulStyle = "navbar-nav me-auto mb-2 mb-lg-0";
+  const liStyle = "nav-item";
+  const aStyle = "nav-link active text-white";
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark">
@@ -18,45 +25,9 @@ export const NavBar = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item ">
-                <a
-                  className="nav-link active text-white"
-                  aria-current="page"
-                  href="#"
-                >
-                  Link-1
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active text-white"
-                  aria-current="page"
-                  href="#"
-                >
-                  Link-2
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active text-white"
-                  aria-current="page"
-                  href="#"
-                >
-                  Link-3
-                </a>
-              </li>
-            </ul>
-            <form className="d-flex" role="search">
-              <div className="text-end">
-                <button type="button" className="btn btn-outline-light me-2">
-                  Login
-                </button>
-                <button type="button" className="btn btn-info">
-                  Sign-up
-                </button>
-              </div>
-            </form>
+            <Links options={{ links, ulStyle, liStyle, aStyle }} />
+            <Login/>
+            
           </div>
         </div>
       </nav>
